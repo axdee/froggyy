@@ -11,7 +11,7 @@ class cars
 	short x;
 
 	unsigned char size;
-	unsigned char speed;
+	unsigned char speed = 2;
 	unsigned char type;
 	unsigned short y;
 	sf::Sprite sprite;
