@@ -1,9 +1,10 @@
 #pragma once
+#pragma once
 
 #include <SFML/Graphics.hpp>
 #include<array>
 
-class cars
+class logs
 {
 	sf::Texture texture;
 	bool direction;
@@ -18,7 +19,7 @@ class cars
 public:
 	void draw(sf::RenderWindow& win);
 	void update();
-	cars(unsigned char fx, unsigned char fy);
+	logs(unsigned char fx, unsigned char fy);
 	sf::IntRect get_rect() const;
 };
 

@@ -8,7 +8,7 @@
 #include "map.hpp"
 #include "Values.hpp"
 
-void map(const std::array<bool, 5>& i_swamp, sf::RenderWindow& i_window)
+void map(sf::RenderWindow& win)
 {
 	sf::Sprite sprite;
 
@@ -72,21 +72,13 @@ void map(const std::array<bool, 5>& i_swamp, sf::RenderWindow& i_window)
 				}
 			}
 
-			i_window.draw(sprite);
+			win.draw(sprite);
 		}
 	}
 
 	
 	sprite.setTextureRect(sf::IntRect(9 * CELL_SIZE, 0, CELL_SIZE, CELL_SIZE));
 
-	for (unsigned char a = 0; a < i_swamp.size(); a++)
-	{
-		if (1 == i_swamp[a])
-		{
-			sprite.setPosition(3 * CELL_SIZE * (0.5f + a), CELL_SIZE);
-
-			i_window.draw(sprite);
-		}
-	}
+	
 }
 

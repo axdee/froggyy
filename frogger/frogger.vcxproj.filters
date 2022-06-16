@@ -30,6 +30,12 @@
     <ClCompile Include="carman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="riverman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="frog.hpp">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="carman.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="riverman.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

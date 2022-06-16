@@ -2,6 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include"cars.hpp"
+#include "frog.hpp"
 
 class carman
 {
@@ -10,6 +11,6 @@ public:
 	carman();
 	void draw(sf::RenderWindow& win);
 	
-	void update();
+	void update(frog& frogs);
 };
 

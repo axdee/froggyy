@@ -5,16 +5,18 @@
 #include "map.hpp"
 #include "cars.hpp"
 #include "carman.hpp"
+#include"riverman.hpp"
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, SCREEN_RESIZE * (FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT)), "Frogo", sf::Style::Close);
 	window.setView(sf::View(sf::FloatRect(0, 0, CELL_SIZE * MAP_WIDTH, FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT)));
 	frog frogg;
 	carman carman;
+	riverman riverman;
 	sf::Clock clock;
 	sf::Time accumulator = sf::Time::Zero;
 	sf::Time ups = sf::seconds(1.f / 60.f);
-	std::array<bool, 5> swamp = { 0 };
+	
 	
 	
 	
@@ -61,17 +63,27 @@ int main()
 			}
 
 		}
-		window.clear();
-		map(swamp, window);
+		
+		
 		while (accumulator > ups)
 		{
 			accumulator -= ups;
-			
 			frogg.update();
-			carman.update();
+			carman.update(frogg);
+			riverman.update(frogg);
 			
 		}
 		
+		if (frogg.get_dead() == 1)
+		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+			{
+				frogg.reset();
+			}
+		}
+
+		window.clear();
+		map(window);
 		frogg.draw(window);
 
 

@@ -142,14 +142,18 @@
     <ClCompile Include="carman.cpp" />
     <ClCompile Include="cars.cpp" />
     <ClCompile Include="frog.cpp" />
+    <ClCompile Include="logs.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="riverman.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="carman.hpp" />
     <ClInclude Include="cars.hpp" />
     <ClInclude Include="frog.hpp" />
+    <ClInclude Include="logs.hpp" />
     <ClInclude Include="map.hpp" />
+    <ClInclude Include="riverman.hpp" />
     <ClInclude Include="Values.hpp" />
   </ItemGroup>
   <ItemGroup>

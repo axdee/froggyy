@@ -1,1 +1,1 @@
-void map(const std::array<bool, 5>& i_swamp, sf::RenderWindow& i_window);
+void map(sf::RenderWindow& i_window);
